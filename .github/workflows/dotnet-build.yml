@@ -20,10 +20,10 @@ jobs:
         dotnet-version: '8.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore github4women/github4women.csproj
 
     - name: Build project
-      run: dotnet build --no-restore
+      run: dotnet build github4women/github4women.csproj --no-restore
 
     - name: Custom log
       run: echo "Build finalizado com sucesso no ambiente GitHub Actions!"
